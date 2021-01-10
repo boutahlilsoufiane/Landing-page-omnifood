@@ -1,0 +1,628 @@
+/* ORANGE #cf6d17 */
+
+/* -----------------------------*/
+/* BASIC SETUP */
+/*------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size:20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* -----------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+section {
+    padding: 80px; 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* -----------------------------*/
+/* HEADINGS */
+/*------------------------------*/
+
+h1,h2,h3 {
+    margin:0;
+    font-weight:300;
+    text-transform: uppercase;
+}
+
+h1{
+    color: #fff;
+    font-size:240%;
+    word-spacing: 4px;
+    letter-spacing:1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align:center;
+    letter-spacing:1px;
+}
+
+h2:after {
+    display: block;
+    background-color:#cf6d17;
+    height:2px;
+    width: 100px;
+    margin: 30px auto;
+    content: ""
+}
+
+h3 {
+    font-size: 100%;
+    margin-bottom: 30px
+}
+
+/* -----------------------------*/
+/* PARAGRAPHS */
+/*------------------------------*/
+
+.long-copy {
+    width: 70%;
+    margin: auto 15%;
+    line-height: 145%;
+    text-align: center;
+}
+
+.box p {
+    line-height: 145%;
+    font-size: 90%; 
+}
+
+/* -----------------------------*/
+/* LINKS */
+/*------------------------------*/
+
+a:link, a:visited {
+    color: #cf6d17;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #cf6d17;
+    transition: color 0.5s, border-bottom 0.2s;
+}
+
+a:hover, a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* -----------------------------*/
+/* ICONS */
+/*------------------------------*/
+
+.big-icon {
+    font-size: 400%;
+    color: #cf6d17;
+    margin-bottom: 10px;
+}
+
+.small-icon {
+    color: #cf6d17;
+    margin-right: 15px;
+    font-size:100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -7px;
+}
+
+/* -----------------------------*/
+/* BUTTONS */
+/*------------------------------*/
+
+.btn:link, .btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link, .btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-ghost:link, .btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover, .btn:active{
+    background-color: #cf6d17;
+}
+
+.btn-full:hover, .btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover, .btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: white;
+}
+
+/* -----------------------------*/
+/* HEADER */
+/*------------------------------*/
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+    float: left;
+}
+
+.black-logo {
+    height: 50px;
+    width: auto;
+    margin-top: 5px;
+    float: left;
+}
+
+.black-logo {
+    display: none;
+    margin: 5px 0;
+}
+
+/* MAIN NAV */
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 40px
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:visited, .main-nav li a:link{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 1px solid transparent; 
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #cf6d17; 
+    padding-bottom: 5px;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: white;
+}
+
+/* STICKY NAV */
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 999;
+}
+
+.sticky .main-nav li a:visited,.sticky .main-nav li a:link{
+    padding: 18px 0;
+    color: #555;
+    
+}
+
+.sticky .logo{
+    display: none;
+}
+
+.sticky .black-logo {
+    display: block;
+}
+
+.sticky .main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 18px
+}
+
+/* -----------------------------*/
+/* FEATURES */
+/*------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+/* -----------------------------*/
+/* MEALS */
+/*------------------------------*/
+
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase li {
+    float: left;
+    width: 25%;
+}
+
+.meals-showcase {
+    width: 100%;
+    list-style: none;
+}
+
+.meal-photo {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img{
+    opacity: 70%;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 100%;
+}
+
+/* -----------------------------*/
+/* HOW IT WORKS */
+/*------------------------------*/
+
+.section-steps {
+    background-color: #cacaca26;
+}
+
+.steps-box{
+    margin-top: 30px;
+}
+    
+.steps-box:last-child {
+    padding-left: 3%;
+    padding-top: 40px;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.app-screen {
+  width: 40%;  
+}
+
+.step {
+    margin-bottom: 50px;
+}
+
+
+.step div {
+    border: #CF6D18 solid 2px;
+    margin-right: 20px;
+    color: #cf6d17;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 150%;
+    float: left;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 7px;
+}
+
+.btn-app img{
+    width: auto;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.btn-app:link, .btn-app:active {
+    border-bottom: 1px solid transparent;  
+}
+
+/* -----------------------------*/
+/* CITIES */
+/*------------------------------*/
+
+.city-image {
+    width: 100%;
+    height: auto;
+}
+
+.section-cities h3 {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.city-feature {
+    margin-bottom: 10px;
+}
+
+/* -----------------------------*/
+/* TESTIMENTIOANLS */
+/*------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    margin-top: 37px;
+    quotes: "“" "”";
+    font-style: italic;
+    margin-bottom: 25px;
+    line-height: 140%;
+    font-size: 90%;
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    margin-bottom: -11px;
+    margin-left: -9px;
+}
+
+
+cite {
+    vertical-align: center;
+    display: block;    
+    font-size: 90%;
+}
+
+.section-testimonials img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* -----------------------------*/
+/* PLANS */
+/*------------------------------*/
+
+.section-plans {
+    background-color: #cacaca26;
+}
+
+.plan-box {
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 2%;
+    box-shadow: 0px 2px 2px #efefef;
+}
+
+
+.plan-box > div {
+    padding: 15px 15px;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.plan-box div:first-child {
+    padding-bottom: 13px;
+    background-color: #fcfcfc;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-price {
+    color: #cf6d17;
+    margin-top: -3px;
+}
+
+.plan-price-meal {
+    font-size: 74%;
+    margin-top: 5px
+}
+
+.plan-price span {
+    font-size: 250%;
+    display: inline;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0px 5px 9px;
+    font-size: 83%;   
+}
+
+/* -----------------------------*/
+/* CONTACT */
+/*------------------------------*/
+
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #312a2a26;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #aeaeb7;
+  font-weight: 300;
+  opacity: 1; /* Firefox */
+}
+
+select {
+    background-color: #dedede4f;
+    color: #887d7d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+textarea {
+    height: 100px;
+}
+
+*:focus{
+    outline: none;
+}
+
+.drop-us{
+    padding-top: 13px;
+}
+
+/* -----------------------------*/
+/* FOOTER */
+/*------------------------------*/
+
+footer {
+    background-color: black;
+    color: #ffffff70;
+    padding: 50px;
+}
+
+footer nav {
+    margin-bottom: 40px;
+
+}
+.footer-nav{
+    float: left;
+    font-size: 80%;
+}
+
+.social-links{
+    float: right;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li {
+    float: left;
+    margin-right: 15px;
+}
+
+.social-links li:last-child, .footer-nav li:last-child {
+    margin-right: 0px;
+}
+
+.footer-nav li{
+    margin-top: 2px
+}
+
+footer p{
+    text-align: center;
+    font-size: 80%;
+}
+
+footer a:link, footer a:visited{
+    border-bottom: 1px solid transparent;
+    color: #ffffff70;
+}
+
+footer a:hover, footer a:active{
+    color: #ffffffff;
+}
+
+.facebook:hover {
+    color: #1877f2;
+}
+
+.twitter:hover {
+    color: #1da1f2;
+}
+
+.google:hover {
+    color: #ea4335;
+}
+
+.instagram:hover {
+    color: #7232bd;
+}
